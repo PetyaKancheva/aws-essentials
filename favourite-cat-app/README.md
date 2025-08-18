@@ -1,14 +1,21 @@
-# Welcome to your CDK TypeScript project
+## Lydia's Favourite Cat
 
-This is a blank project for CDK development with TypeScript.
+Lydia wants to have a static website that shows a random cat picture from the internet and allows it to be saved as a favorite.
+The cat images are provided by _caatas.com_ and accessed via GET
+Every time the user clicks the "Save cat" button, this cat is saved in the system, and Lydia(project owner) gets a message that they have a new favorite cat.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
-## Useful commands
+### AWS services
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+- dynamoDB table
+- SNS topic and Subscription
+- lambda function
+- custom BaseFunction
+- API Gateway
+
+### Other implementations
+
+- Snapshot test
+- CI/CD pipeline with GIT Actions
+
+### Cost Estimation
