@@ -1,14 +1,22 @@
-# Welcome to your CDK TypeScript project
+## Sisi's JSON object service
 
-This is a blank project for CDK development with TypeScript.
+Sisi wants a service that processes JSON objects through a public endpoint where the JSON can be sent using curl or Postman.
+If the JSON is valid, the object shall be sent to her via email, else the element should be added to a DynamoDB table.
+The table item should be deleted after 24hrs and Sisi informed via email.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+### AWS services
 
-## Useful commands
+- dynamoDB table
+- SNS topic and subscription
+- multiple lambda functions
+- custom BaseFunction
+- custom EmailSubscription
+- Schedule
+- API Gateway
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+### Other implementations
+
+- Snapshot test
+- CI/CD pipeline with GIT Actions
+
+### Cost Estimation
