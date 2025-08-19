@@ -9,9 +9,8 @@ The table item should be deleted after 24hrs and Sisi informed via email.
 - dynamoDB table
 - SNS topic and subscription
 - multiple lambda functions
-- custom BaseFunction
-- custom EmailSubscription
-- Schedule
+- custom Function, Subscription, Topic
+- scheduled event
 - API Gateway
 
 ### Other implementations
