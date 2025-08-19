@@ -1,13 +1,8 @@
 import {DynamoDBClient, PutItemCommand} from "@aws-sdk/client-dynamodb";
-import {CreateScheduleCommand, SchedulerClient} from "@aws-sdk/client-scheduler";
-import {PublishCommand, SNSClient, ThrottledException} from "@aws-sdk/client-sns";
-import {APIGatewayProxyEvent, SNSEvent, SNSEventRecord} from "aws-lambda"
-import {NotificationEvent} from "aws-sdk/clients/ssm";
+import { SNSEvent} from "aws-lambda"
 import {randomUUID} from "crypto";
 
-const snsClient = new SNSClient;
 const ddb = new DynamoDBClient;
-const schedulerClinet = new SchedulerClient;
 
 export const handler = async (event: SNSEvent) => {
 
@@ -27,7 +22,6 @@ export const handler = async (event: SNSEvent) => {
     const timestamp = now.toISOString();
 
     // calculate deletion time
-
 
     //  delete by 10
     var minutes = (Math.floor(now.getMinutes() / 10) * 10); //+ 20 min for testing
