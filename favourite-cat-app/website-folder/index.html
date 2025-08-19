@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<img id="catImg" src="" width="300"/>
+
+<br><br>
+
+<button id="saveCat">Save cat</button>
+
+<script>
+
+    let savedUrl = '';
+    let catId = '';
+    const fetchCat = async () => {
+        const res = await fetch("https://cataas.com/cat?json=true");
+        const data = await res.json();
+
+        catId = data.id;
+        savedUrl = `https://cataas.com/cat/${data.id}`;
+
+        document.getElementById("catImg").src = savedUrl;
+    };
+
+    fetchCat();
+
+    document.getElementById("saveCat").onclick = async () => {
+        // update to lydia  api endpoint after deployment
+        // TODO dynamic address
+        const result = await fetch(`https://...amazonaws.com/prod/saveCat`, {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({catId, savedUrl})
+        });
+        const data = await result.json();
+        alert("Favourite cat saved!");
+    };
+</script>
+</body>
+
+</html>
