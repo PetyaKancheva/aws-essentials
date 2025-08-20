@@ -1,3 +1,3 @@
-# aws-essentials
+## aws-essentials
 
-Some small projects for AWS.
+Small projects for AWS ☁️
