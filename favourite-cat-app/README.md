@@ -19,4 +19,10 @@ Every time the user clicks the "Save cat" button, this cat is saved in the syste
 - Snapshot test
 - CI/CD pipeline with GIT Actions
 
+### Architectural Diagram
+
+<img height=300 src="img/diagram.png"/>
+
 ### Cost Estimation
+
+Ca. 78,036 USD/month
