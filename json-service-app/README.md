@@ -18,4 +18,10 @@ The table item should be deleted after 24hrs and Sisi informed via email.
 - Snapshot test
 - CI/CD pipeline with GIT Actions
 
+### Architectural Diagram
+
+ <img height=300   src="img/diagram.png" />
+
 ### Cost Estimation
+
+Ca. 17,63 USD/month
